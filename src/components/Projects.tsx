@@ -64,8 +64,8 @@ const Projects = () => {
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                        <div className="p-6 text-white">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent md:opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                        <div className="p-4 md:p-6 text-white w-full">
                           <div className="flex flex-wrap gap-2 mb-4">
                             {project.tech.map((tech, index) => (
                               <span
@@ -76,9 +76,14 @@ const Projects = () => {
                               </span>
                             ))}
                           </div>
-                          <div className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-4 transition-all duration-300">
-                            View Project
-                            <span className="text-xl">→</span>
+                          <div className="flex items-center justify-between">
+                            <div className="inline-flex items-center gap-2 text-white font-medium group-hover:gap-4 transition-all duration-300">
+                              View Project
+                              <span className="text-xl">→</span>
+                            </div>
+                            <div className="text-white/80 text-sm">
+                              {project.year}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -86,13 +91,20 @@ const Projects = () => {
 
                     {/* Project Info */}
                     <div className="w-full md:w-1/2 space-y-4">
-                      <div className="text-amber-800 font-medium">
-                        {project.year}
-                      </div>
                       <h3 className="text-2xl font-bold group-hover:text-amber-800 transition-colors duration-300">
                         {project.name}
                       </h3>
                       <p className="text-gray-700">{project.description}</p>
+                      <div className="md:hidden flex flex-wrap gap-2 mt-4">
+                        {project.tech.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 bg-amber-800/10 rounded-full text-sm text-amber-800"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </a>
                 </div>
