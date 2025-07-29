@@ -11,7 +11,7 @@ import Contact from "../components/Contact";
 
 const Portfolio = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-white to-orange-200 overflow-x-hidden">
+    <div className="relative w-full bg-gradient-to-r from-white to-orange-200">
       <Navbar />
       <Hero />
       <About />
