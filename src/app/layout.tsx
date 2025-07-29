@@ -27,10 +27,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/k-Icon.png" type="image/png" sizes="32x32" />
-        <link rel="apple-touch-icon" href="/k-Icon.png" />
-      </head>
       <body className={`${poppins.className} antialiased`}>{children}</body>
     </html>
   );
