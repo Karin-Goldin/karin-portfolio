@@ -80,7 +80,7 @@ const About = () => {
             className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl"
           >
             <Image
-              src="/karin&sandy.png"
+              src="/karin-and-sandy.png"
               alt="Karin and Sandy"
               fill
               className="object-cover hover:scale-105 transition-transform duration-500"
