@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
+import { IconType } from "react-icons";
 import { RiReactjsFill } from "react-icons/ri";
 import { RiNextjsFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -23,7 +24,7 @@ import { SiAntdesign } from "react-icons/si";
 import { SiStorybook } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 
-const SkillIcon = ({ Icon, name }: { Icon: any; name: string }) => {
+const SkillIcon = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
     <motion.div
       className="flex flex-col items-center gap-2 group"
@@ -134,7 +135,7 @@ const Skills = () => {
                 {category.category}
               </h3>
               <div className="grid grid-cols-2 gap-6 p-6 bg-white/50 rounded-lg">
-                {category.skills.map((skill, index) => (
+                {category.skills.map((skill) => (
                   <SkillIcon
                     key={skill.name}
                     Icon={skill.icon}

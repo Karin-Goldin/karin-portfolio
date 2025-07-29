@@ -46,13 +46,13 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-gray-700 leading-relaxed">
-              Hello there! I'm a front-end developer, specializing in ReactJS.{" "}
-              <br />I have a deep passion for creating interactive and dynamic
-              user interfaces that provide seamless user experiences.
+              Hello there! I&apos;m a front-end developer, specializing in
+              ReactJS. <br />I have a deep passion for creating interactive and
+              dynamic user interfaces that provide seamless user experiences.
               <br /> My love for coding began during my studies and since then,
-              I've been committed to continuously learning and growing my skill
-              set. I'm constantly on the lookout for new challenges and
-              opportunities to apply my expertise in developing web
+              I&apos;ve been committed to continuously learning and growing my
+              skill set. I&apos;m constantly on the lookout for new challenges
+              and opportunities to apply my expertise in developing web
               applications.
             </p>
             <p className="text-gray-700 leading-relaxed">
@@ -61,14 +61,14 @@ const About = () => {
               I love how my ideas come to life on the screen, step by step, with
               every line of code shaping something visual and meaningful. <br />{" "}
               The real-time feedback, the elegance of minimalism, and that
-              satisfying "wow" effect when everything comes together—these are
-              the moments that remind me exactly why I chose to become a
-              front-end developer.
+              satisfying &quot;wow&quot; effect when everything comes
+              together—these are the moments that remind me exactly why I chose
+              to become a front-end developer.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              When I'm not coding, you can find me training in calisthenics,
-              spending quality time with my family and friends, or hanging out
-              with Sandy, my dog and favorite sidekick.
+              When I&apos;m not coding, you can find me training in
+              calisthenics, spending quality time with my family and friends, or
+              hanging out with Sandy, my dog and favorite sidekick.
             </p>
           </motion.div>
 
