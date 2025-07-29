@@ -12,25 +12,6 @@ export const metadata: Metadata = {
   title: "Karin Goldin",
   description:
     "Personal portfolio of Karin Goldin - Frontend Developer and Web Developer",
-  icons: {
-    icon: [
-      {
-        url: "/k-Icon.png",
-        type: "image/png",
-        sizes: "32x32",
-      },
-      {
-        url: "/k-Icon.png",
-        type: "image/png",
-        sizes: "16x16",
-      },
-    ],
-    apple: {
-      url: "/k-Icon.png",
-      type: "image/png",
-    },
-    shortcut: "/k-Icon.png",
-  },
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -46,6 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="icon" href="/k-Icon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/k-Icon.png" />
+      </head>
       <body className={`${poppins.className} antialiased`}>{children}</body>
     </html>
   );
