@@ -13,7 +13,23 @@ export const metadata: Metadata = {
   description:
     "Personal portfolio of Karin Goldin - Frontend Developer and Web Developer",
   icons: {
-    icon: "/k-Icon.png",
+    icon: [
+      {
+        url: "/k-Icon.png",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/k-Icon.png",
+        type: "image/png",
+        sizes: "16x16",
+      },
+    ],
+    apple: {
+      url: "/k-Icon.png",
+      type: "image/png",
+    },
+    shortcut: "/k-Icon.png",
   },
   viewport: {
     width: "device-width",
