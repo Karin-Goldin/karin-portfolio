@@ -62,17 +62,24 @@ const NavLinks: React.FC<{ isMobile?: boolean; onItemClick?: () => void }> = ({
 }) => {
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center justify-center h-full py-4 space-y-6">
+      <div className="flex flex-col items-center justify-center py-8 space-y-4">
         {links.map((item) => (
           <Link
             key={item.name}
             to={item.section}
             smooth={true}
             spy={true}
-            duration={800}
+            duration={500}
             offset={-100}
             className="text-amber-800 text-xl font-medium hover:text-amber-950 transition-colors duration-200"
-            onClick={onItemClick}
+            onClick={() => {
+              onItemClick?.();
+              setTimeout(() => {
+                document
+                  .getElementById(item.section)
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }, 100);
+            }}
           >
             {item.name}
           </Link>
