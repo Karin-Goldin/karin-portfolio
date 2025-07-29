@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { GithubIcon, LinkedinIcon } from "lucide-react";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ const TypewriterText: React.FC = () => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
-  const words = ["Frontend Developer.", "Web Developer."];
+  const words = useMemo(() => ["Frontend Developer.", "Web Developer."], []);
 
   useEffect(() => {
     const typeSpeed = isDeleting ? 50 : 100;
@@ -37,7 +37,7 @@ const TypewriterText: React.FC = () => {
 
   return (
     <div className="text-2xl md:text-4xl font-semibold text-black">
-      I'm a{" "}
+      I&apos;m a{" "}
       <span className="text-amber-800 relative">
         {text}
         <span className="absolute -right-2 top-0 w-0.5 h-full bg-black animate-pulse"></span>
@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full min-h-[calc(100vh-5rem)] flex items-center relative z-0"
+      className="w-full min-h-[calc(100vh-5rem)] flex items-center"
     >
       <div className="w-full h-full flex flex-col md:flex-row justify-center md:justify-evenly items-center px-4 py-8 gap-8">
         {/* Profile Image */}
@@ -90,7 +90,7 @@ const Hero = () => {
           className="w-full md:w-2/5 text-black space-y-6 text-center md:text-left"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hey I'm{" "}
+            Hey I&apos;m{" "}
             <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
               Karin
             </span>

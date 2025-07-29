@@ -1,56 +1,64 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
-import { RiReactjsFill } from "react-icons/ri";
-import { RiNextjsFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaHtml5 } from "react-icons/fa";
-import { BsFiletypeScss } from "react-icons/bs";
-import { SiMongodb } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { VscVscode } from "react-icons/vsc";
-import { BsCursorFill } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
-import { RiNpmjsFill } from "react-icons/ri";
-import { BsLightbulb } from "react-icons/bs";
-import { BiMessageDetail } from "react-icons/bi";
-import { HiUserGroup } from "react-icons/hi";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { TbArrowsRandom } from "react-icons/tb";
-import { SiAntdesign } from "react-icons/si";
-import { SiStorybook } from "react-icons/si";
-import { FaNode } from "react-icons/fa";
+import { IconType } from "react-icons";
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaGit,
+  FaNode,
+  FaGithub,
+  FaNpm,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiMongodb,
+  SiExpress,
+  SiAntdesign,
+} from "react-icons/si";
+import {
+  BsLightbulb,
+  BsChatDots,
+  BsPeople,
+  BsClock,
+  BsArrowsMove,
+} from "react-icons/bs";
+import { VscCode } from "react-icons/vsc";
 
-const SkillIcon = ({ Icon, name }: { Icon: any; name: string }) => {
+interface Skill {
+  name: string;
+  icon: IconType;
+  proficiency?: number; // Made optional since it's not used in the current implementation
+}
+
+const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
+  const Icon = skill.icon;
   return (
     <motion.div
-      className="flex flex-col items-center gap-2 group"
-      whileHover={{ scale: 1.1 }}
-      transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 10,
-      }}
+      className="flex flex-col items-center gap-2"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.2 }}
     >
       <motion.div
-        className="w-16 h-16 flex items-center justify-center bg-white/50 rounded-xl relative overflow-hidden"
-        whileHover={{ rotate: [0, -5, 5, 0] }}
-        transition={{
-          duration: 0.5,
-          ease: "easeInOut",
+        className="w-16 h-16 rounded-lg bg-white/50 flex items-center justify-center relative overflow-hidden"
+        whileHover={{
+          boxShadow: "0 0 20px rgba(146, 64, 14, 0.3)",
         }}
       >
         <Icon className="w-8 h-8 text-amber-800 relative z-10" />
         <motion.div
           className="absolute inset-0 bg-amber-800/10"
-          initial={{ scale: 0, opacity: 0 }}
-          whileHover={{ scale: 1.5, opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          initial={{ scale: 0 }}
+          whileHover={{ scale: 1 }}
+          transition={{ duration: 0.2 }}
         />
       </motion.div>
-      <span className="text-sm font-medium text-gray-700">{name}</span>
+      <span className="text-sm font-medium text-gray-700">{skill.name}</span>
     </motion.div>
   );
 };
@@ -59,37 +67,35 @@ const skillCategories = [
   {
     category: "Frontend",
     skills: [
-      { name: "ReactJS", icon: RiReactjsFill },
-      { name: "Next.js", icon: RiNextjsFill },
-      { name: "JavaScript", icon: IoLogoJavascript },
+      { name: "ReactJS", icon: FaReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "JavaScript", icon: FaJs },
       { name: "TypeScript", icon: SiTypescript },
-      { name: "Tailwind CSS", icon: RiTailwindCssFill },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "HTML5", icon: FaHtml5 },
-      { name: "SCSS", icon: BsFiletypeScss },
-      { name: "Storybook", icon: SiStorybook },
+      { name: "CSS3", icon: FaCss3Alt },
+      { name: "Express", icon: SiExpress },
     ],
   },
   {
     category: "Development Tools",
     skills: [
-      { name: "Git", icon: FaGitAlt },
-      { name: "VS Code", icon: VscVscode },
-      { name: "Cursor", icon: BsCursorFill },
+      { name: "Git", icon: FaGit },
+      { name: "VS Code", icon: VscCode },
+      { name: "Cursor", icon: FaCode },
       { name: "GitHub", icon: FaGithub },
-      { name: "npm", icon: RiNpmjsFill },
+      { name: "NPM", icon: FaNpm },
       { name: "Ant Design", icon: SiAntdesign },
-      { name: "mongoDB", icon: SiMongodb },
-      { name: "Node.js", icon: FaNode },
     ],
   },
   {
     category: "Soft Skills",
     skills: [
       { name: "Problem Solving", icon: BsLightbulb },
-      { name: "Communication", icon: BiMessageDetail },
-      { name: "Team Work", icon: HiUserGroup },
-      { name: "Time Management", icon: AiOutlineClockCircle },
-      { name: "Adaptability", icon: TbArrowsRandom },
+      { name: "Communication", icon: BsChatDots },
+      { name: "Team Work", icon: BsPeople },
+      { name: "Time Management", icon: BsClock },
+      { name: "Adaptability", icon: BsArrowsMove },
     ],
   },
 ];
@@ -134,12 +140,8 @@ const Skills = () => {
                 {category.category}
               </h3>
               <div className="grid grid-cols-2 gap-6 p-6 bg-white/50 rounded-lg">
-                {category.skills.map((skill, index) => (
-                  <SkillIcon
-                    key={skill.name}
-                    Icon={skill.icon}
-                    name={skill.name}
-                  />
+                {category.skills.map((skill) => (
+                  <SkillCard key={skill.name} skill={skill} />
                 ))}
               </div>
             </motion.div>
