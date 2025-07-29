@@ -11,9 +11,8 @@ const TypewriterText: React.FC = () => {
   const [text, setText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
-  const words = ["Frontend Developer.", "Web Developer."];
-
   useEffect(() => {
+    const words = ["Frontend Developer.", "Web Developer."];
     const typeSpeed = isDeleting ? 50 : 100;
     const word = words[wordIndex];
 
@@ -24,20 +23,20 @@ const TypewriterText: React.FC = () => {
         setIsDeleting(false);
         setWordIndex((prev) => (prev + 1) % words.length);
       } else {
-        setText((word) =>
+        setText((currentText) =>
           isDeleting
-            ? word.slice(0, -1)
-            : words[wordIndex].slice(0, word.length + 1)
+            ? currentText.slice(0, -1)
+            : words[wordIndex].slice(0, currentText.length + 1)
         );
       }
     }, typeSpeed);
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, wordIndex, words]);
+  }, [text, isDeleting, wordIndex]);
 
   return (
     <div className="text-2xl md:text-4xl font-semibold text-black">
-      I'm a{" "}
+      I&apos;m a{" "}
       <span className="text-amber-800 relative">
         {text}
         <span className="absolute -right-2 top-0 w-0.5 h-full bg-black animate-pulse"></span>
@@ -90,7 +89,7 @@ const Hero = () => {
           className="w-full md:w-2/5 text-black space-y-6 text-center md:text-left"
         >
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hey I'm{" "}
+            Hey I&apos;m{" "}
             <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
               Karin
             </span>
@@ -99,9 +98,8 @@ const Hero = () => {
           <TypewriterText />
 
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-            A passionate Frontend Developer based in Tel Aviv, Israel. I
-            specialize in building exceptional digital experiences that live on
-            the internet.
+            Frontend developer based in Tel Aviv, building fast, beautiful, and
+            accessible web experiences for the modern web.
           </p>
 
           {/* Social Links */}
