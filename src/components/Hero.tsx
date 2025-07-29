@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { GithubIcon, LinkedinIcon } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
 import Lottie from "lottie-react";
@@ -105,9 +105,9 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center md:justify-start gap-4">
             {[
-              { Icon: GithubIcon, href: "https://github.com/karingoldin" },
+              { Icon: FaGithub, href: "https://github.com/karingoldin" },
               {
-                Icon: LinkedinIcon,
+                Icon: FaLinkedin,
                 href: "https://www.linkedin.com/in/karin-goldin/",
               },
             ].map(({ Icon, href }, index) => (
