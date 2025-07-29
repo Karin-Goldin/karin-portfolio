@@ -32,6 +32,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
         duration={800}
         offset={-100}
         onClick={onClick}
+        activeClass="!bg-amber-800 !text-white"
         className="px-5 py-2 border-2 border-amber-800 rounded-full text-black hover:bg-amber-800 hover:text-white transition-all duration-200 font-medium cursor-pointer"
       >
         {children}
@@ -47,10 +48,10 @@ export const NavLink: React.FC<NavLinkProps> = ({
       duration={800}
       offset={-100}
       onClick={onClick}
-      className="relative text-black text-lg font-medium hover:text-amber-800 transition-all duration-300 group cursor-pointer"
+      activeClass="text-amber-800 after:w-full"
+      className="relative text-black text-lg font-medium hover:text-amber-800 transition-all duration-300 group cursor-pointer after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-0.5 after:bg-amber-800 after:transition-all after:duration-200 hover:after:w-full"
     >
       {children}
-      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-800 transition-all duration-200 group-hover:w-full"></span>
     </Link>
   );
 };
@@ -61,7 +62,7 @@ const NavLinks: React.FC<{ isMobile?: boolean; onItemClick?: () => void }> = ({
 }) => {
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center justify-center h-full">
+      <div className="flex flex-col items-center justify-center h-full py-4 space-y-6">
         {links.map((item) => (
           <Link
             key={item.name}
@@ -70,7 +71,7 @@ const NavLinks: React.FC<{ isMobile?: boolean; onItemClick?: () => void }> = ({
             spy={true}
             duration={800}
             offset={-100}
-            className="text-black text-2xl font-medium py-6 hover:text-amber-800 transition-colors duration-200"
+            className="text-amber-800 text-xl font-medium hover:text-amber-950 transition-colors duration-200"
             onClick={onItemClick}
           >
             {item.name}

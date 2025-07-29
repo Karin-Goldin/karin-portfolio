@@ -69,7 +69,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       <div
-        className={`fixed md:hidden inset-0 bg-gradient-to-r from-white to-orange-200 z-[99] transition-all duration-300 ${
+        className={`fixed md:hidden top-0 left-0 right-0 h-[50vh] bg-gradient-to-r from-white/70 to-orange-200/70 backdrop-blur-sm z-[99] transition-all duration-300 ${
           isMobileMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
