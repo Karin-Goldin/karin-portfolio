@@ -35,7 +35,7 @@ const TypewriterText: React.FC = () => {
   }, [text, isDeleting, wordIndex]);
 
   return (
-    <div className="text-2xl md:text-4xl font-semibold text-black">
+    <div className="text-xl md:text-4xl font-semibold text-black">
       I&apos;m a{" "}
       <span className="text-amber-800 relative">
         {text}
@@ -51,7 +51,7 @@ const Hero = () => {
       id="home"
       className="w-full min-h-[calc(100vh-5rem)] flex items-center relative z-0"
     >
-      <div className="w-full h-full flex flex-col md:flex-row justify-center md:justify-evenly items-center px-4 py-8 gap-8">
+      <div className="w-full h-full flex flex-col-reverse md:flex-row justify-center md:justify-evenly items-center px-4 py-8 gap-8">
         {/* Profile Image */}
         <motion.div
           variants={fadeIn("left", 0.3)}
@@ -60,7 +60,7 @@ const Hero = () => {
           viewport={{ once: false, amount: 0.3 }}
           className="w-full md:w-1/2 max-w-xl flex justify-center relative"
         >
-          <div className="relative">
+          <div className="relative w-[280px] md:w-[400px] lg:w-[500px] xl:w-[600px]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10">
               <Lottie
                 animationData={blobAnimation}
@@ -74,7 +74,7 @@ const Hero = () => {
               alt="Karin Goldin"
               width={600}
               height={600}
-              className="w-auto h-auto relative"
+              className="w-full h-auto relative"
               priority
             />
           </div>
@@ -86,9 +86,9 @@ const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
-          className="w-full md:w-2/5 text-black space-y-6 text-center md:text-left"
+          className="w-full md:w-2/5 text-black space-y-4 md:space-y-6 text-center md:text-left"
         >
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-3xl md:text-6xl font-bold">
             Hey I&apos;m{" "}
             <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
               Karin
@@ -97,7 +97,7 @@ const Hero = () => {
 
           <TypewriterText />
 
-          <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+          <p className="text-sm md:text-lg text-gray-700 leading-relaxed">
             Frontend developer based in Tel Aviv, building fast, beautiful, and
             accessible web experiences for the modern web.
           </p>
@@ -116,9 +116,9 @@ const Hero = () => {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center border-2 border-amber-800 rounded-full text-amber-800 hover:bg-amber-800 hover:text-white hover:scale-110 hover:shadow-[0_0_10px_rgba(109,67,0,0.5)] transition-all duration-200"
+                className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border-2 border-amber-800 rounded-full text-amber-800 hover:bg-amber-800 hover:text-white hover:scale-110 hover:shadow-[0_0_10px_rgba(109,67,0,0.5)] transition-all duration-200"
               >
-                <Icon size={20} />
+                <Icon size={18} className="md:w-5 md:h-5" />
               </a>
             ))}
           </div>
@@ -128,9 +128,8 @@ const Hero = () => {
             <a
               href="/KarinGoldinCV.pdf"
               download="KarinGoldinCV.pdf"
-              className="inline-flex items-center px-8 py-3 bg-amber-800 text-white font-bold rounded-md hover:scale-110 hover:bg-transparent hover:text-amber-800 hover:border-2 hover:border-amber-800 hover:shadow-[0_0_40px_rgba(109,67,0,0.5)] transition-all duration-200"
+              className="inline-flex items-center px-6 md:px-8 py-2 md:py-3 bg-amber-800 text-white font-bold rounded-md hover:scale-110 hover:bg-transparent hover:text-amber-800 hover:border-2 hover:border-amber-800 hover:shadow-[0_0_40px_rgba(109,67,0,0.5)] transition-all duration-200 text-sm md:text-base"
               onClick={(e) => {
-                // Check if file exists
                 fetch("/KarinGoldinCV.pdf").catch(() => {
                   e.preventDefault();
                   alert(

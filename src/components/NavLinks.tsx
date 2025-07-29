@@ -62,7 +62,7 @@ const NavLinks: React.FC<{ isMobile?: boolean; onItemClick?: () => void }> = ({
 }) => {
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center justify-center h-full py-4 space-y-6">
+      <div className="flex flex-col px-6">
         {links.map((item) => (
           <Link
             key={item.name}
@@ -70,14 +70,9 @@ const NavLinks: React.FC<{ isMobile?: boolean; onItemClick?: () => void }> = ({
             smooth={true}
             spy={true}
             duration={500}
-            delay={100}
-            offset={-100}
-            className="text-amber-800 text-xl font-medium hover:text-amber-950 transition-colors duration-200"
-            onClick={() => {
-              setTimeout(() => {
-                onItemClick?.();
-              }, 150);
-            }}
+            offset={-80}
+            className="text-amber-800 text-lg font-medium hover:text-amber-950 transition-colors duration-200 py-3 border-b border-amber-800/20 last:border-none"
+            onClick={onItemClick}
           >
             {item.name}
           </Link>
