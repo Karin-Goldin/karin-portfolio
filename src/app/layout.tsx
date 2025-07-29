@@ -13,21 +13,7 @@ export const metadata: Metadata = {
   description:
     "Personal portfolio of Karin Goldin - Frontend Developer and Web Developer",
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/k-Icon.png", type: "image/png" },
-    ],
-    apple: { url: "/k-Icon.png", type: "image/png" },
-    shortcut: { url: "/k-Icon.png", type: "image/png" },
-  },
-  manifest: "/manifest.json",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
-  other: {
-    "msapplication-TileImage": "/k-Icon.png",
-    "msapplication-TileColor": "#ffffff",
+    icon: "/k-Icon.png",
   },
 };
 
@@ -38,14 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/k-Icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/k-Icon.png" />
-        <link rel="shortcut icon" href="/k-Icon.png" type="image/png" />
-        <meta name="msapplication-TileImage" content="/k-Icon.png" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-      </head>
       <body className={poppins.className}>{children}</body>
     </html>
   );
