@@ -12,7 +12,7 @@ const projects = [
     github: "https://github.com/Karin-Goldin/Rimon-project",
     description:
       "A modern website for Rimon fund, featuring a clean design and responsive layout.",
-    tech: ["React.js", "TypeScript", "SASS", "HTML"],
+    tech: ["React.js", "TypeScript", "Tailwind CSS", "Vite"],
   },
   {
     name: "Whats in your fridge? (recipes app)",
@@ -22,7 +22,7 @@ const projects = [
     github: "https://github.com/Karin-Goldin/whats-in-the-fridge",
     description:
       "An innovative app that helps users find recipes based on ingredients they have in their fridge.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "OpenAI"],
   },
 ];
 
@@ -31,18 +31,12 @@ const Projects = () => {
     <section id="projects" className="w-full py-20 px-2 sm:px-4 md:px-20">
       <AnimateOnScroll>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center">
             My{" "}
             <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
               Projects
             </span>
           </h2>
-          <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto text-sm sm:text-base">
-            I have worked on a variety of web development projects, ranging from
-            responsive websites for small businesses to full-stack applications
-            and complex front-end interfaces.
-          </p>
-
           <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {projects.map((project) => (
               <AnimateOnScroll key={project.name}>
