@@ -37,7 +37,7 @@ const Projects = () => {
               Projects
             </span>
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
             {projects.map((project) => (
               <AnimateOnScroll key={project.name}>
                 <div className="group bg-white/50 rounded-lg sm:rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 relative">
