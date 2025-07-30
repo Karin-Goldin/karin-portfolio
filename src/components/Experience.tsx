@@ -124,7 +124,7 @@ const Experience = () => {
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-amber-800 rounded-full border-4 border-orange-100 z-10" />
 
                 {/* Badge */}
-                <div className="absolute left-8 md:left-[52%] top-[-2px] bg-amber-800 text-white text-sm px-3 py-1 rounded-full">
+                <div className="absolute left-8 md:left-[52%] top-[-2px] bg-amber-800 text-white text-sm px-3 py-1 rounded-full z-20">
                   {exp.badge}
                 </div>
 
@@ -134,7 +134,7 @@ const Experience = () => {
                     index % 2 === 0 ? "md:mr-[52%]" : "md:ml-[52%]"
                   }`}
                 >
-                  <div className="bg-white/50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
+                  <div className="bg-white/50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative mt-6">
                     {exp.showCompanyLogo && (
                       <div className="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10">
                         <Image
