@@ -13,7 +13,7 @@ const links = [
   { name: "About", section: "about" },
   { name: "Skills", section: "skills" },
   { name: "Experience", section: "experience" },
-  { name: "My Projects", section: "projects" },
+  { name: "Projects", section: "projects" },
   { name: "Contact", section: "contact", isContactBtn: true },
 ];
 
