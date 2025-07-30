@@ -1,17 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/variants";
+import Image from "next/image";
 
 const experiences = [
   {
     id: "now",
     badge: "NOW",
-    role: "Front Developer",
+    role: "Frontend Developer",
     company: "Cybereason",
+    showCompanyLogo: true,
+    logoPath: "/cybereason.jpeg",
     period: "2023-NOW",
     responsibilities: [
       "Built and maintained reusable React components across multiple features.",
-      "Developed responsive and accessible user-facing interfaces using React, TypeScript, and Next.js/Vite",
+      "Developed responsive and accessible user-facing interfaces using React, TypeScript, and Next.js/Vite.",
       "Collaborated with UI/UX designers to bring high-fidelity mockups to life.",
       "Worked closely with the backend team to implement new features and improve the user experience.",
       "Contributed to internal design system and maintained component libraries.",
@@ -24,6 +27,8 @@ const experiences = [
     badge: "2023",
     role: "NOC Engineer",
     company: "Cybereason",
+    showCompanyLogo: true,
+    logoPath: "/cybereason.jpeg",
     period: "2021-2023",
     responsibilities: [
       "Monitored and managed large-scale network operations and infrastructure.",
@@ -38,6 +43,8 @@ const experiences = [
     id: "2021",
     badge: "2021",
     role: "The Academic College of Tel Aviv-Yaffo - BSc in Information Systems",
+    showCompanyLogo: true,
+    logoPath: "/academic.jpeg",
     period: "2019-2022",
     responsibilities: [
       "Gained strong foundation in databases, networking, and software engineering.",
@@ -127,8 +134,19 @@ const Experience = () => {
                     index % 2 === 0 ? "md:mr-[52%]" : "md:ml-[52%]"
                   }`}
                 >
-                  <div className="bg-white/50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <h3 className="text-xl font-bold text-amber-800">
+                  <div className="bg-white/50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
+                    {exp.showCompanyLogo && (
+                      <div className="absolute top-4 right-4 w-8 h-8 md:w-10 md:h-10">
+                        <Image
+                          src={exp.logoPath}
+                          alt={exp.company || "Company Logo"}
+                          width={40}
+                          height={40}
+                          className="rounded-full object-cover"
+                        />
+                      </div>
+                    )}
+                    <h3 className="text-xl font-bold text-amber-800 pr-12">
                       {exp.role}
                     </h3>
                     {exp.company && (
