@@ -65,7 +65,7 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-[90]"
+          className="md:hidden fixed inset-0 bg-opacity-50 z-[90]"
           onClick={handleMenuClose}
         />
       )}
