@@ -1,23 +1,17 @@
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import Footer from "../components/Footer";
 
 const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   title: "Karin Goldin",
   description:
     "Personal portfolio of Karin Goldin - Frontend Developer and Web Developer",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
 };
 
 export default function RootLayout({
@@ -27,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${poppins.className} antialiased`}>{children}</body>
+      <body
+        className={`${poppins.className} antialiased min-h-screen flex flex-col`}
+      >
+        <main className="flex-grow">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
