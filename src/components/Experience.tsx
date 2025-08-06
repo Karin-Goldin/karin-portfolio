@@ -94,7 +94,7 @@ const Experience = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
-          className="text-4xl lg:text-5xl font-bold mb-12 text-center"
+          className="text-4xl lg:text-5xl font-bold mb-12 text-center text-black"
         >
           My{" "}
           <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
@@ -150,7 +150,7 @@ const Experience = () => {
                       {exp.role}
                     </h3>
                     {exp.company && (
-                      <div className="text-lg font-semibold mb-2">
+                      <div className="text-lg font-semibold mb-2 text-black">
                         {exp.company}
                       </div>
                     )}
@@ -166,7 +166,7 @@ const Experience = () => {
                           viewport={{ once: false }}
                         >
                           <span className="w-1.5 h-1.5 mt-2 bg-amber-800 rounded-full flex-shrink-0" />
-                          <span>{resp}</span>
+                          <span className="text-black">{resp}</span>
                         </motion.li>
                       ))}
                     </ul>

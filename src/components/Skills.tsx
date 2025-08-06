@@ -104,7 +104,7 @@ const Skills = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.3 }}
-          className="text-4xl lg:text-5xl font-bold mb-12 text-center"
+          className="text-4xl lg:text-5xl font-bold mb-12 text-center text-black"
         >
           My{" "}
           <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">

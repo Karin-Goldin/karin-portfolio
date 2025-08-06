@@ -31,7 +31,7 @@ const Projects = () => {
     <section id="projects" className="w-full py-20 px-2 sm:px-4 md:px-20">
       <AnimateOnScroll>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-16 text-center text-black">
             My{" "}
             <span className="text-amber-800 drop-shadow-[0_0_10px_rgba(109,67,0,0.5)]">
               Projects
@@ -72,10 +72,10 @@ const Projects = () => {
                       <div className="text-amber-800 font-medium text-xs sm:text-sm">
                         {project.year}
                       </div>
-                      <h3 className="text-sm sm:text-xl font-bold group-hover:text-amber-800 transition-colors duration-300 line-clamp-1 sm:line-clamp-none">
+                      <h3 className="text-sm sm:text-xl font-bold text-black group-hover:text-amber-800 transition-colors duration-300 line-clamp-1 sm:line-clamp-none">
                         {project.name}
                       </h3>
-                      <p className="text-gray-700 text-xs sm:text-base flex-1 line-clamp-2 sm:line-clamp-none hidden sm:block">
+                      <p className="text-black text-xs sm:text-base flex-1 line-clamp-2 sm:line-clamp-none hidden sm:block">
                         {project.description}
                       </p>
                       <div className="flex items-center justify-between gap-2">
