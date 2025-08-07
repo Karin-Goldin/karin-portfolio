@@ -26,6 +26,8 @@ import { FaNode } from "react-icons/fa";
 import { DiGoogleCloudPlatform } from "react-icons/di";
 import { SiJira } from "react-icons/si";
 import { MdInsertEmoticon } from "react-icons/md";
+import { FaJenkins } from "react-icons/fa";
+import { AiOutlineOpenAI } from "react-icons/ai";
 
 const SkillIcon = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
@@ -86,6 +88,8 @@ const skillCategories = [
       { name: "Node.js", icon: FaNode },
       { name: "Google Cloud Platform", icon: DiGoogleCloudPlatform },
       { name: "Jira", icon: SiJira },
+      { name: "Jenkins", icon: FaJenkins },
+      { name: "OpenAI", icon: AiOutlineOpenAI },
     ],
   },
   {
