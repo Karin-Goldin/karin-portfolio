@@ -13,13 +13,13 @@ const experiences = [
     logoPath: "/cybereason.jpeg",
     period: "2023-2025",
     responsibilities: [
+      "- Experienced in developing frontend features for cybersecurity platforms (EDR/XDR).",
       "Built and maintained reusable React components across multiple features.",
       "Developed responsive and accessible user-facing interfaces using React, TypeScript, and Next.js/Vite.",
       "Collaborated with UI/UX designers to bring high-fidelity mockups to life.",
       "Worked closely with the backend team to implement new features and improve the user experience.",
       "Contributed to internal design system and maintained component libraries.",
-      "Participated in code reviews, pair programming, and agile ceremonies.",
-      "Optimized applications for maximum speed and scalability.",
+      "Developed features as part of a cross-functional agile team, actively participating in daily standups, sprint planning, and retrospectives.",
     ],
   },
   {
