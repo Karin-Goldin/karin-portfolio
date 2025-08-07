@@ -33,7 +33,7 @@ const experiences = [
     responsibilities: [
       "Monitored and managed large-scale network operations and infrastructure.",
       "Identified, diagnosed, and resolved critical network issues in real time.",
-      "Utilized tools like Splunk, Zabbix, Kibana, and internal dashboards for analysis.",
+      "Utilized tools like GCP, Zabbix, Kibana, and internal dashboards for analysis.",
       "Collaborated with cross-functional teams to escalate and resolve incidents efficiently.",
       "Maintained and enforced network security protocols.",
       "Documented incident responses and created standard operating procedures.",
