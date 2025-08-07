@@ -127,16 +127,10 @@ const Hero = () => {
           <div>
             <a
               href="/cvkaringoldin.pdf"
-              download="cvkaringoldin.pdf"
+              download="KarinGoldin_CV.pdf"
               className="inline-flex items-center px-6 md:px-8 py-2 md:py-3 bg-amber-800 text-white font-bold rounded-md hover:scale-110 hover:bg-transparent hover:text-amber-800 hover:border-2 hover:border-amber-800 hover:shadow-[0_0_40px_rgba(109,67,0,0.5)] transition-all duration-200 text-sm md:text-base"
-              onClick={(e) => {
-                fetch("/cvkaringoldin.pdf").catch(() => {
-                  e.preventDefault();
-                  alert(
-                    "CV file is currently unavailable. Please try again later."
-                  );
-                });
-              }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <span>Download CV</span>
             </a>
