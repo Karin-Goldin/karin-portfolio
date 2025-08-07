@@ -23,6 +23,9 @@ import { TbArrowsRandom } from "react-icons/tb";
 import { SiAntdesign } from "react-icons/si";
 import { SiStorybook } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
+import { DiGoogleCloudPlatform } from "react-icons/di";
+import { SiJira } from "react-icons/si";
+import { MdInsertEmoticon } from "react-icons/md";
 
 const SkillIcon = ({ Icon, name }: { Icon: IconType; name: string }) => {
   return (
@@ -81,6 +84,8 @@ const skillCategories = [
       { name: "Ant Design", icon: SiAntdesign },
       { name: "mongoDB", icon: SiMongodb },
       { name: "Node.js", icon: FaNode },
+      { name: "Google Cloud Platform", icon: DiGoogleCloudPlatform },
+      { name: "Jira", icon: SiJira },
     ],
   },
   {
@@ -91,6 +96,7 @@ const skillCategories = [
       { name: "Team Work", icon: HiUserGroup },
       { name: "Time Management", icon: AiOutlineClockCircle },
       { name: "Adaptability", icon: TbArrowsRandom },
+      { name: "Self-Motivation", icon: MdInsertEmoticon },
     ],
   },
 ];
